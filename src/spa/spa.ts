@@ -1,4 +1,5 @@
-import render, {type VDom} from "./renderer";
+import type { VDom } from "./types";
+import render from "./renderer";
 
 export default function renderSpa(querySelector: string): void{
     const data:VDom = [{
@@ -20,3 +21,4 @@ export default function renderSpa(querySelector: string): void{
     }];
     render(querySelector, data)
 }
+

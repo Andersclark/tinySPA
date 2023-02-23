@@ -1,16 +1,4 @@
-
-
-export type ElementTag = keyof HTMLElementTagNameMap;
-
-export type VNode = {
-    tagName: ElementTag,
-    innerText?: string;
-    children: VDom,
-    classList?: string[],
-
-}
-export type VDom = Array<VNode>
-
+import type {VDom, VNode} from "./types";
 
 export default function render(selector: string, vDom: VDom){
     const rootEl = document.querySelector(selector) as HTMLElement;
