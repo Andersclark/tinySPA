@@ -1,4 +1,3 @@
-
 # TinySPA
 
 This is my playground as I figure out how rendering and reactivity works.
@@ -12,4 +11,13 @@ This is my playground as I figure out how rendering and reactivity works.
 
 ## Want to play?
 
-1. Clone the repo and start messing with the data structure inside the `spa.ts` file.
+### Initial setup
+
+1. Clone the repo.
+1. Install dependencies: `npm install`
+1. Start dev server: `npm run dev`
+
+
+### What to do?
+
+Start messing with the data structure inside the `spa.ts` file.
