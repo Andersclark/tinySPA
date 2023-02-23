@@ -2,7 +2,7 @@ import {VDom, VNode} from "./types";
 import generateUUID from "../utilities/guid";
 
 //TODO: State should be sourced from something else later
-const baseState: VDom = [{
+const baseState = [{
   children: [{
     tagName: "h2",
     innerText: "Recursive rendering works!",
@@ -20,12 +20,13 @@ const baseState: VDom = [{
   tagName: "h1"
 }];
 
-function attachKeysToState(vDom:VDom):VDom{
+function attachKeysToState(state: any[]):VDom{
+  const vDom = [...state]
   vDom.forEach(node => {
     attachKey(node)
     attachKeysToState(node.children)
   })
-  return vDom;
+  return state;
 }
 
 function attachKey(node:VNode): VNode {
