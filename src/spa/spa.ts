@@ -5,7 +5,15 @@ export default function renderSpa(querySelector: string): void{
         children: [{
             tagName: "h2",
             innerText: "Recursive rendering works!",
-            children: []
+            classList: [],
+            children: [
+                {
+                tagName: "h3",
+                innerText: "CSS-classes works",
+                classList: ["red-background"],
+                children: [],
+                }
+            ]
         }],
         innerText: "HELLO WORLD",
         tagName: "h1"
