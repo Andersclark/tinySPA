@@ -17,12 +17,12 @@ function renderDOM(vDom: VDom, targetElement: HTMLElement) {
 
 const KEY_ATTRIBUTE_NAME = "data-spa-key";
 
-function getElement(key: string) {
+export function getElement(key: string) {
     const selector = `[${KEY_ATTRIBUTE_NAME}='${key}']`
     return document.querySelector(selector)
 }
 
-function updateElement(node: VNode) {
+export function updateElement(node: VNode) {
     const element = getElement(node.key);
     if(!element){
         return
@@ -31,7 +31,7 @@ function updateElement(node: VNode) {
     element.replaceWith(nextElement);
 }
 
-function makeElement(node:VNode): HTMLElement{
+export function makeElement(node:VNode): HTMLElement{
     const element = document.createElement(node.tagName);
     if(node.innerText){
         element.innerText = node.innerText;
