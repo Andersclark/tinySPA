@@ -1,7 +1,8 @@
 export type ElementTag = keyof HTMLElementTagNameMap;
 
 export type VNode = {
-    tagName: ElementTag,
+    key?: string;
+    tagName: ElementTag;
     innerText?: string;
     children: VDom,
     classList?: string[],
