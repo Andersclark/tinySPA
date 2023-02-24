@@ -15,6 +15,13 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.black-background {
+  background-color: black;
+}
 .red-background {
   background-color: red;
 }
+.white-text {
+  color: white;
+}
+

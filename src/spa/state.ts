@@ -3,21 +3,42 @@ import generateUUID from "../utilities/guid";
 
 //TODO: State should be sourced from something else later
 const baseState = [{
-  children: [{
-    tagName: "h2",
-    innerText: "Recursive rendering works!",
-    classList: [],
-    children: [
-      {
-        tagName: "h3",
-        innerText: "CSS-classes works",
-        classList: ["red-background"],
-        children: [],
-      }
-    ]
-  }],
+  tagName: "main",
   innerText: "HELLO WORLD",
-  tagName: "h1"
+  children: [
+    {
+      tagName: "h1",
+      innerText: "First child of first level",
+      classList: [],
+      children: [],
+    },
+    {
+      tagName: "article",
+      classList: [],
+      children: [
+        {
+          tagName: "h2",
+          innerText: "First child of second level",
+          classList: [],
+          children: [],
+        },
+        {
+          tagName: "p",
+          innerText: "Second child of second level level... lorem ipsum, recursive rendering is a thing",
+          classList: [],
+          children: [],
+        },
+          {
+          tagName: "p",
+          innerText: "Third child of second level levelLorem ipsum, recursive rendering is a thing",
+          classList: [],
+          children: [],
+        },
+
+
+    ]
+  },
+  ],
 }];
 
 function attachKeysToState(state: any[]):VDom{
