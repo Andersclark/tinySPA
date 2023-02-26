@@ -1,4 +1,4 @@
-import renderSPA from "./spa/spa"
+import renderSPA from "./spa"
 import attachGlobalMethods from "./utilities/attachGlobalDevMethods";
 
 renderSPA("#app")

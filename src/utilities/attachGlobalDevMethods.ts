@@ -1,4 +1,4 @@
-import { updateElement } from "../spa/renderer";
+import { updateElement } from "../spa/render/renderer";
 
 function attachGlobalMethods(methods: Array<(args0: any)=> unknown | void>): void {
   const GLOBAL:any = window;

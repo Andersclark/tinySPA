@@ -1,18 +1,16 @@
-import type {VDom, VNode} from "./types";
+import type {VNode} from "./types";
 
-export default function render(selector: string, vDom: VDom){
-    const rootEl = document.querySelector(selector) as HTMLElement;
-    renderDOM(vDom, rootEl)
+export default function render(targetSelector: string, rootNode: VNode){
+    const rootEl = document.querySelector(targetSelector) as HTMLElement;
+    renderNode(rootNode, rootEl)
 }
 
-function renderDOM(vDom: VDom, targetElement: HTMLElement) {
-    vDom.forEach(node => {
-        const element = makeElement(node)
-        targetElement.appendChild(element);
-        if(node.children.length > 0){
-            renderDOM(node.children, element)
+function renderNode(rootNode: VNode, targetElement: HTMLElement) {
+        const element = makeElement(rootNode)
+        targetElement.appendChild(element)
+        if(rootNode.children.length > 0){
+            rootNode.children.forEach(childNode => renderNode(childNode, element))
         }
-    })
 }
 
 const KEY_ATTRIBUTE_NAME = "data-spa-key";

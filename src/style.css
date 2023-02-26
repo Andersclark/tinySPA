@@ -15,13 +15,13 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.black-background {
-  background-color: black;
+
+.text-black {
+  color: black;
 }
-.red-background {
+.background-red {
   background-color: red;
 }
-.white-text {
-  color: white;
+.text-italic {
+  font-style: italic;
 }
-

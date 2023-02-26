@@ -20,4 +20,4 @@ This is my playground as I figure out how rendering and reactivity works.
 
 ### What to do?
 
-Start messing with the data structure inside the `spa.ts` file.
+Start messing with the data structure inside the `index.ts` file.
